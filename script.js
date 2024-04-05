@@ -1,4 +1,7 @@
-var firstNum,secondNum,operator;
+var firstNum,secondNum,operator,displayNumber;
+const displayContainer = document.getElementById("display");
+const operands = document.getElementsByClassName("operand");
+let displayDiv = document.createElement("div");
 function add(firstInput,secondInput){
     return firstInput + secondInput;
 }
@@ -25,7 +28,20 @@ function operate(firstNum,secondNum,operator){
         multiply(firstNum,secondNum);
     }
 }
-console.log(add(1,2));
-console.log(subtract(2,1));
-console.log(multiply(3,4));
-console.log(divide(4,2));
+/*
+document.getElementById("one").addEventListener("click",function(){
+      displayNumber = 1;
+      let div = document.createElement("div");
+      div.textContent = displayNumber;
+      displayContainer.appendChild(div);
+});
+*/
+function displayOperand(e){
+    var displayNumber = e.target.value;
+    displayDiv.textContent = displayNumber;
+    console.log(displayNumber);
+}
+for(i = 0; i < operands.length;i++){
+    operands[i].addEventListener("click",displayOperand);
+}
+displayContainer.appendChild(displayDiv);
