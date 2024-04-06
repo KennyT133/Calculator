@@ -90,7 +90,6 @@ function computeOperater(e){
         secondNum = null;
     }
     operator = e.target.value;
-    
 }
 for(let i = 0; i < operands.length;i++){
     operands[i].addEventListener("click",displayOperand);
