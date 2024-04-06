@@ -1,7 +1,16 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    min-height: 100vh;    
+    background-color: lightcyan;
+}
 .calculatorContainer{
     border: 1px solid black;
     display: flex;
     flex-direction: column;
 }
+
 
 
